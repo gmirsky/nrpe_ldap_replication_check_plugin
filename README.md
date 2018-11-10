@@ -2,7 +2,7 @@
 
 nrpe plug-in that checks a slave ldap replication against the master ldap server.
 
-#Installation
+## Installation
 ------------------
 Copy this script to the client machine in the following directory:
 
