@@ -2,7 +2,7 @@
 #
 # Name: check_ldap_replication.sh
 #
-# nrpe plug-in that checks ldap replication against master
+# nrpe plug-in that checks a slave's ldap replication against the master ldap
 #
 # Copy this script to the client machine in the following directory:
 #       /usr/lib64/nagios/plugins directory.
@@ -17,7 +17,7 @@
 # Restart nrpe on the client (sudo systemctl restart nrpe)
 #
 # On the nagios/naemon server perform the following test of the new script.
-# Do this from the nagios/anemon server plugin directory:
+# Do this from the nagios/naemon server plugin directory:
 #     /usr/lib64/nagios/plugins
 # using check_nrpe
 #
@@ -28,6 +28,7 @@
 #     OK- ldap001.yourdomain.com 20181231011858Z#000000#00#000000 0
 #
 # Configure your Nagios/Naemon/Thruk front end to use the plugin
+#
 MASTER_LDAP_SERVER=$1
 SLAVE_LDAP_SERVER=`hostname`
 #
